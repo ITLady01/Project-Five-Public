@@ -112,7 +112,7 @@ function handleModal(data) {
             modal.style.display = 'none';
         }
     });
-
+    
     // close modal when you click on the modal container/outside of the modal info and contents
     modal.addEventListener('click', (e) => {
         if (e.target.className === 'modal-container') {
@@ -218,7 +218,7 @@ const searchContainer = document.querySelector('.search-container');
 searchHTML = `
   <form action="#" method="get">
     <input type="search" id="search-input" class="search-input" placeholder="Search...">
-    <input type="submit" value="&#x1F50D;" id="serach-submit" class="search-submit">
+    <input type="submit" value="&#x1F50D;" id="search-submit" class="search-submit">
   </form>
 `;
 searchContainer.innerHTML = searchHTML;
