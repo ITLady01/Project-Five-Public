@@ -1,4 +1,19 @@
+const gallery = document.querySelector('.gallery');
+const body = document.querySelector('body');
+const card = document.querySelectorAll('.card');
+let employees;
 
+// Fetch the data from the URL parameter
+fetch('https://randomuser.me/api/?results=12&nat=us')
+    .then(checkStatus)
+    .then(res => res.json())
+    .then(data => staff = data.results)
+    .then(staff => {
+        displayEmployees(staff);
+        displayModal(staff);
+    })
+    .catch(error => console.log('Looks like there was a problem', error))
+// console.log(staff);
 const gallery = document.querySelector('.gallery');
 const body = document.querySelector('body');
 const card = document.querySelectorAll('.card');
