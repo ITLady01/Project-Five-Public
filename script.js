@@ -1,3 +1,26 @@
+// // $.ajax({
+// //     url: 'https://randomuser.me/api/',
+// //     dataType: 'json',
+// //     success: function (data) {
+// //         console.log(data);
+// //     }
+// // });
+// function modalWindow(x) {
+//     const image = jsonData[x].picture.large;
+//     const firstName = jsonData[x].name.first;
+//     const lasName = jsonData[x].name.last;
+//     const email = jsonData[x].email;
+//     const city = jsonData[x].location.city.toUpperCase;
+//     const phone = jsonData[x].phone;
+//     const street = jsonData[x].location.street.toUpperCase;
+//     const state = jsonData[x].location.state.toUpperCase;
+//     const postCode = jsonData[x].location.postcode;
+//     const dob = jsonData[x].dob.date.slice(0, 10);
+// }
+
+// const modalContainer = 
+
+
 // $.ajax({
 //     url: 'https://randomuser.me/api/',
 //     dataType: 'json',
@@ -221,19 +244,19 @@ function showPrev() {
 
 }
 
-function searchProfile() {
+function ProfileSearch() {
 
     const input = document.getElementById('search-input');
     const cards = document.getElementsByClassName('card');
-    let profiles = [].slice.call(cards);
+    let StaffProfiles = [].slice.call(cards);
 
-    profiles.map(profile => {
-        if (profile.children[1].children[0].textContent.toLowerCase().search(input.value.toLowerCase()) !== -1) {
-            profile.style.display = 'flex';
-            profile.nextSibling.classList.add('modal-container');
+    StaffProfiles.map(profile => {
+        if (StaffProfiles.children[1].children[0].textContent.toLowerCase().search(input.value.toLowerCase()) !== -1) {
+            StaffProfiles.style.display = 'flex';
+            StaffProfiles.nextSibling.classList.add('modal-container');
         } else {
-            profile.style.display = 'none';
-            profile.nextSibling.classList.remove('modal-container');
+            StaffProfiles.style.display = 'none';
+            StaffProfiles.nextSibling.classList.remove('modal-container');
         }
     })
 }
@@ -245,15 +268,15 @@ const form = generateHTML('form');
 form.action = '#';
 form.method = 'get';
 
-const InputSearch = generateHTML('input');
-InputSearch.type = 'search';
-InputSearch.id = 'search-input';
-InputSearch.className = 'search-input';
-InputSearch.placeholder = 'Search...';
-InputSearch.onkeyup = searchProfile;
+const SearchInput = generateHTML('input');
+SearchInput.type = 'search';
+SearchInput.id = 'search-input';
+SearchInput.className = 'search-input';
+SearchInput.placeholder = 'Search...';
+SearchInput.onkeyup = searchProfile;
 
 searchContainer.appendChild(form);
-form.appendChild(InputSearch);
+form.appendChild(SearchInput);
 
 
 // ------------------------------------------
@@ -275,5 +298,3 @@ gallery.addEventListener("click", event => {
     }
 
 });
-
-
