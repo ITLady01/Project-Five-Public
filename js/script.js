@@ -39,13 +39,13 @@ const ModalChange = (direction) => {
     document.querySelectorAll('.modal-text')[4].textContent = `Birthday: ${StaffBirthday(NewStaff.dob.date)}`
 }
 
-/*format birthday according  ro the mockup*/
+/*format birthday according  to the mockup*/
 const StaffBirthday = date => {
   let BirthdayInfo = date.slice(0, 10).split("-");
   return `${BirthdayInfo[1]}/${BirthdayInfo[2]}/${BirthdayInfo[0].slice(2, 4)}`;
 };
 
-/*remove al modal elements when the modal is exit*/
+/*remove al modal elements when the modal exit*/
 const ModalExit = () => {
   document.querySelector(".modal-container").remove();
 };
