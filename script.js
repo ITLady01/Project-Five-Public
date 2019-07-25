@@ -1,4 +1,3 @@
-
 const gallery = document.querySelector('.gallery');
 const body = document.querySelector('body');
 const card = document.querySelectorAll('.card');
@@ -112,7 +111,7 @@ function handleModal(data) {
             modal.style.display = 'none';
         }
     });
-    
+
     // close modal when you click on the modal container/outside of the modal info and contents
     modal.addEventListener('click', (e) => {
         if (e.target.className === 'modal-container') {
