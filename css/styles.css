@@ -12,12 +12,14 @@ html,
 body {
     width: 100%;
     max-width: 100%;
+    background: beige;
+    
 }
 
 body {
     font-family: "Nunito", sans-serif;
     text-align: center;
-    background: Light green;  }
+    background: beige;  }
 
 header {
     padding: 15px 5px 5px;
@@ -80,8 +82,8 @@ header h1 {
     width: 100%;
     max-width: 1200px;
     margin: auto;
-    background:beige
-    ;
+    background:beige;
+    
 }
 
 .card {
